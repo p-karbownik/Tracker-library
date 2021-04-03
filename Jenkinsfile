@@ -34,7 +34,12 @@ pipeline {
         stage('Tests')
         {
             steps {
-                sh 'npm test -- --watchAll=false'
+                sh 'npm run test'
+            }
+            post{
+                always {
+                    junit 'output/coverage/junit/junit.xml'
+                }
             }
         } 
         stage('Publish to Nexus Repository Manager')
