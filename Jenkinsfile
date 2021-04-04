@@ -21,7 +21,6 @@ pipeline {
                 sh "npm config set always-auth true"
                 sh "npm config set strict-ssl true"
                 sh "npm config ls"
-                sh "npm install --dev jest-junit"
                 sh 'npm install' 
             }
         }
