@@ -15,9 +15,6 @@ pipeline {
         stage('Install') { 
             steps {
                 sh "rm -f .npmrc"
-                sh "rm ./package-lock.json"
-                sh "rm -r ./node_modules"
-                sh "npm cache clear --force"
                 sh "npm config set email blackbirdcu@gmail.com"
                 sh "npm config set _auth ${NEXUS_CREDENTIAL_ID}"
                 sh "npm config set registry ${env.NEXUS_PROTOCOL}://${env.NEXUS_URL}/repository/${env.NEXUS_REPOSITORY}/"
