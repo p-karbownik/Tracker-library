@@ -9,6 +9,7 @@ pipeline {
         NEXUS_URL = "nexus:8081"
         NEXUS_REPOSITORY = "npm-group"
         NEXUS_CREDENTIAL_ID = credentials('nexus_token')
+        CI = 'true'
     }
    
     stages {
