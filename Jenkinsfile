@@ -36,11 +36,6 @@ pipeline {
             steps {
                 sh 'npm run test'
             }
-            post{
-                always {
-                    junit 'output/coverage/junit/junit.xml'
-                }
-            }
         } 
         stage('Publish to Nexus Repository Manager')
         {
