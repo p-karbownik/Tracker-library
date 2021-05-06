@@ -1,8 +1,12 @@
 {
   "name": "tracker-library",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A library for sending event descriptions to the server for further analysis",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "files": [
+    "/build"
+  ],
   "scripts": {
     "build": "rimraf ./build && tsc",
     "start:dev": "nodemon",

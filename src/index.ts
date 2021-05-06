@@ -1,1 +1,1 @@
-console.log('Hello world!')
+export {sendEvent} from './pikactivity-tracker-library'
