@@ -1,8 +1,10 @@
 export class Tracker {
+
     /**
      * initialiseTracker
      */
     public initialiseTracker() {
+        // TODO
         console.log('Not implemented yet!')
     }
     
@@ -10,6 +12,7 @@ export class Tracker {
      * enableEventTracking
      */
     public enableEventTracking() {
+        // TODO
         console.log('Not implemented yet!')
     }
     
@@ -17,6 +20,7 @@ export class Tracker {
      * disableEventTracking
      */
     public disableEventTracking() {
+        // TODO
         console.log('Not implemented yet!')
     }
 }
