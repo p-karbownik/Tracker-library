@@ -1,26 +1,17 @@
-export class Tracker {
+let enableTracking: boolean = false;
 
-    /**
-     * initialiseTracker
-     */
-    public initialiseTracker() {
-        // TODO
-        console.log('Not implemented yet!')
-    }
-    
-    /**
-     * enableEventTracking
-     */
-    public enableEventTracking() {
-        // TODO
-        console.log('Not implemented yet!')
-    }
-    
-    /**
-     * disableEventTracking
-     */
-    public disableEventTracking() {
-        // TODO
-        console.log('Not implemented yet!')
-    }
+export function setEventTrackingEnabled() {
+    enableTracking = true;
+    console.log('Tracking enable!');
+}
+export function setEventTrackingDisabled() {
+    enableTracking = false;
+    console.log('Tracking disable!');
+}
+export function initialiseTracker() {
+    // TODO
+    console.log('Not implemented yet!')
+}
+export function isTrackingEnabled() {
+    return enableTracking;
 }
