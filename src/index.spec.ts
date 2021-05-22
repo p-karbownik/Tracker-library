@@ -1,7 +1,26 @@
-const index = require("./index")
+import { getEnableTracking, enableEventTracking, disableEventTracking } from './Tracker';
+import { send } from './Event'
 
-describe('test', () => {
-    test('add', async () => {
-      expect(2 + 2).toEqual(4);
-    });
-  });
+describe('setEnableEventTrackingTest', () => {
+  test('setEnable', function () {
+    enableEventTracking();
+    expect(getEnableTracking()).toEqual(true);
+  }
+  );
+});
+
+describe('setDisableEventTrackingTest', () => {
+  test('setEnable', function () {
+    disableEventTracking();
+    expect(getEnableTracking()).toEqual(false);
+  }
+  );
+});
+
+describe('sendEventWhenDisableEventTrackingTest', () => {
+  test('sendEvent', async function () {
+    disableEventTracking();
+    await expect(send('token', 'data')).resolves.toEqual(-1);
+  }
+  );
+});
