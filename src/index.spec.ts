@@ -1,26 +1,26 @@
-import { getEnableTracking, enableEventTracking, disableEventTracking } from './Tracker';
+import { isTrackingEnabled, setEventTrackingEnabled, setEventTrackingDisabled } from './Tracker';
 import { send } from './Event'
 
-describe('setEnableEventTrackingTest', () => {
-  test('setEnable', function () {
-    enableEventTracking();
-    expect(getEnableTracking()).toEqual(true);
+describe('setEventTrackingEnabledTest', () => {
+  test('setEnabled', function () {
+    setEventTrackingEnabled();
+    expect(isTrackingEnabled()).toEqual(true);
   }
   );
 });
 
-describe('setDisableEventTrackingTest', () => {
-  test('setEnable', function () {
-    disableEventTracking();
-    expect(getEnableTracking()).toEqual(false);
+describe('setEventTrackingDisabledTest', () => {
+  test('setDisabled', function () {
+    setEventTrackingDisabled();
+    expect(isTrackingEnabled()).toEqual(false);
   }
   );
 });
 
-describe('sendEventWhenDisableEventTrackingTest', () => {
+describe('sendEventWhenTrackingIsDisabledTest', () => {
   test('sendEvent', async function () {
-    disableEventTracking();
-    await expect(send('token', 'data')).resolves.toEqual(-1);
+    setEventTrackingDisabled();
+    await expect(send('token', 'data', 'name')).resolves.toEqual(-1);
   }
   );
 });

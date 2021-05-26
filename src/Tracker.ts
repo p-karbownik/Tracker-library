@@ -1,17 +1,17 @@
 let enableTracking: boolean = false;
 
-export function enableEventTracking() {
+export function setEventTrackingEnabled() {
     enableTracking = true;
-    console.log('Tracking enable!');
+    console.log('Tracking enabled!');
 }
-export function disableEventTracking() {
+export function setEventTrackingDisabled() {
     enableTracking = false;
-    console.log('Tracking disable!');
+    console.log('Tracking disabled!');
 }
 export function initialiseTracker() {
     // TODO
     console.log('Not implemented yet!')
 }
-export function getEnableTracking() {
+export function isTrackingEnabled() {
     return enableTracking;
 }
